@@ -50,7 +50,6 @@ function openServiceModal(title, description, imageUrl, detailsHtml) {
     document.body.style.overflow = 'hidden'; 
 }
 
-// Função para fechar o modal
 function closeServiceModal() {
     serviceModal.style.display = 'none'; 
     modalOverlay.style.display = 'none'; 
@@ -82,5 +81,62 @@ modalOverlay.addEventListener('click', closeServiceModal);
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && serviceModal.style.display === 'flex') {
         closeServiceModal();
+    }
+});
+
+//
+
+const frotamodal = document.getElementById('frota-modal-open'); 
+const frotamodalOverlay = document.getElementById('frota-overlay'); 
+const frotacloseButton = document.getElementById('btn-frota-close'); 
+const frotamodalImage = document.getElementById('frota-modal-image');
+const frotamodalTitle = document.getElementById('frota-modal-title'); 
+const frotamodalDescription = document.getElementById('frota-modal-description'); 
+const frotamodalDetails = document.getElementById('frota-modal-details'); 
+
+const frotaCards = document.querySelectorAll('.frota-item');
+
+
+function openFrotaModal(title, description, imageUrl, detailsHtml) {
+    frotamodalTitle.textContent = title;
+    frotamodalDescription.textContent = description; 
+    frotamodalImage.src = imageUrl; 
+    frotamodalDetails.innerHTML = detailsHtml; 
+    frotamodal.style.display = 'flex'; 
+    frotamodalOverlay.style.display = 'block'; 
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeFrotaModal() {
+    frotamodal.style.display = 'none'; 
+    frotamodalOverlay.style.display = 'none'; 
+    document.body.style.overflow = '';
+}
+
+
+frotaCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const title = card.dataset.title || 'Título Padrão';
+        const description = card.dataset.description || 'Descrição padrão do serviço.';
+        const imageUrl = card.dataset.image || 'https://placehold.co/800x450/A0AEC0/FFFFFF?text=Servico';
+        const details = card.dataset.details || '';
+
+
+        openFrotaModal(title, description, imageUrl, details);
+    });
+});
+
+let btn_frota_orc = document.getElementById('btn-frota-orcamento');
+
+btn_frota_orc.addEventListener('click', closeFrotaModal)
+frotacloseButton.addEventListener('click', closeFrotaModal);
+
+
+frotamodalOverlay.addEventListener('click', closeFrotaModal);
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && frotamodal.style.display === 'flex') {
+        closeFrotaModal();
     }
 });
