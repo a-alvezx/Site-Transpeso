@@ -23,7 +23,7 @@ setInterval(() => {
   }
   showingFirst = !showingFirst;
   current = next;
-}, 6000);
+}, 4000);
 
 
 // --- JAVASCRIPT PARA LÓGICA DO MODAL DE SERVIÇOS ---
@@ -40,13 +40,15 @@ const modalDetails = document.getElementById('modal-details');
 const serviceCards = document.querySelectorAll('.service-card');
 
 
-function openServiceModal(title, description, imageUrl, detailsHtml) {
+function openServiceModal(title, description, imageUrl, detailsHtml, linkUrl) {
     modalTitle.textContent = title;
     modalDescription.textContent = description; 
     modalImage.src = imageUrl; 
     modalDetails.innerHTML = detailsHtml; 
     serviceModal.style.display = 'flex'; 
     modalOverlay.style.display = 'block'; 
+    // Atualiza o link do botão do modal
+    document.getElementById('btn-modal-orcamento').href = linkUrl;
     document.body.style.overflow = 'hidden'; 
 }
 
@@ -63,9 +65,10 @@ serviceCards.forEach(card => {
         const description = card.dataset.description || 'Descrição padrão do serviço.';
         const imageUrl = card.dataset.image || 'https://placehold.co/800x450/A0AEC0/FFFFFF?text=Servico';
         const details = card.dataset.details || '';
+        const link = card.dataset.link || '#contato'; // Pega o data-link ou usa #contato como padrão
 
 
-        openServiceModal(title, description, imageUrl, details);
+        openServiceModal(title, description, imageUrl, details, link);
     });
 });
 
@@ -97,13 +100,15 @@ const frotamodalDetails = document.getElementById('frota-modal-details');
 const frotaCards = document.querySelectorAll('.frota-item');
 
 
-function openFrotaModal(title, description, imageUrl, detailsHtml) {
+function openFrotaModal(title, description, imageUrl, detailsHtml, linkUrl) {
     frotamodalTitle.textContent = title;
     frotamodalDescription.textContent = description; 
     frotamodalImage.src = imageUrl; 
     frotamodalDetails.innerHTML = detailsHtml; 
     frotamodal.style.display = 'flex'; 
     frotamodalOverlay.style.display = 'block'; 
+    // Atualiza o link do botão do modal da frota
+    document.getElementById('btn-frota-orcamento').href = linkUrl;
     document.body.style.overflow = 'hidden'; 
 }
 
@@ -120,9 +125,10 @@ frotaCards.forEach(card => {
         const description = card.dataset.description || 'Descrição padrão do serviço.';
         const imageUrl = card.dataset.image || 'https://placehold.co/800x450/A0AEC0/FFFFFF?text=Servico';
         const details = card.dataset.details || '';
+        const link = card.dataset.link || '#contato'; // Pega o data-link ou usa #contato como padrão
 
 
-        openFrotaModal(title, description, imageUrl, details);
+        openFrotaModal(title, description, imageUrl, details, link);
     });
 });
 
