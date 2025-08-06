@@ -65,16 +65,14 @@ serviceCards.forEach(card => {
         const description = card.dataset.description || 'Descrição padrão do serviço.';
         const imageUrl = card.dataset.image || 'https://placehold.co/800x450/A0AEC0/FFFFFF?text=Servico';
         const details = card.dataset.details || '';
-        const link = card.dataset.link || '#contato'; // Pega o data-link ou usa #contato como padrão
+        const link = card.dataset.link || '#contato';
 
 
         openServiceModal(title, description, imageUrl, details, link);
     });
 });
 
-let btn_modal_orc = document.getElementById('btn-modal-orcamento');
 
-btn_modal_orc.addEventListener('click', closeServiceModal)
 closeButton.addEventListener('click', closeServiceModal);
 
 
@@ -125,16 +123,14 @@ frotaCards.forEach(card => {
         const description = card.dataset.description || 'Descrição padrão do serviço.';
         const imageUrl = card.dataset.image || 'https://placehold.co/800x450/A0AEC0/FFFFFF?text=Servico';
         const details = card.dataset.details || '';
-        const link = card.dataset.link || '#contato'; // Pega o data-link ou usa #contato como padrão
+        const link = card.dataset.link || '#contato';
 
 
         openFrotaModal(title, description, imageUrl, details, link);
     });
 });
 
-let btn_frota_orc = document.getElementById('btn-frota-orcamento');
 
-btn_frota_orc.addEventListener('click', closeFrotaModal)
 frotacloseButton.addEventListener('click', closeFrotaModal);
 
 
