@@ -414,9 +414,9 @@ span{
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
+    gap: 5rem;
 }
 .project-card{
-
     background-color:#f3f4f6;
     width: 40rem;
     height: 32rem;
@@ -425,7 +425,6 @@ span{
     box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.322);
     transition: .4s;
     cursor: pointer; 
-    margin-top: 5rem;
 }
 .project-card img{ /*Proporção 9:5*/
     width: 100%;
@@ -459,6 +458,9 @@ span{
 .projetos-text p{
     font-size: 2rem;
     width: 70%;
+}
+.projetos-text{
+    margin-bottom: 2rem;
 }
 /* Que somos */
 .container-quem-somos{
@@ -505,7 +507,7 @@ span{
     align-items: flex-start;
     column-gap: 10rem; 
 }
-.contact-layout h3{
+.contact-layout .contact-info-block h3{
     font-size: 3rem;
     padding: 1.5rem 0;
 }
@@ -555,6 +557,8 @@ span{
 }
 .contact-map h3{
     text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem;
 }
 .contato-text{
     display: flex;
@@ -766,14 +770,26 @@ span{
     section, footer { 
     scroll-snap-align: none; 
     }
-    
+    /* header */
     .menu-de-navegacao, .main-nav{
         display: none;
     }
     .header-section .btn-orcamento{
         display: none;
     }
-
+    .header-section .logo-header{ 
+        width: auto;
+    }
+    .header-section .logo-header a p{
+        font-size: 2.5rem;
+    }
+    .header-section .logo-header a img{
+        height: 3.5rem;
+        width: auto;
+    }
+    .header-section{
+        justify-content: space-between;
+    }
     /* Hero */
     .container-hero{
         height: 100vh;
@@ -792,11 +808,121 @@ span{
     .hero-description{
         width: 90%;
     }
-    
-    .site-footer-content{
-        flex-direction: column;
-    }
     .btn-hero{
         width: 80%;
     }
+
+    /* Service */
+    .info-serv .txt-serv{
+        transform:scale(0.8);
+        padding: 2rem;
+        margin: 0;
+    }
+    .info-serv .txt-serv p{
+        width: 100%;
+    }
+    .services-grid{
+        margin: 0;
+        margin-bottom: 5rem;
+    }
+
+    /* Frota */
+    .frota-text{
+        transform: scale(0.8);
+        padding: 0 0 3rem 0;
+    }
+    .frota-text p{
+        width: 100%;
+    }
+    .frota-grid{
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Projetos */
+    .projetos-text{
+        transform: scale(0.8);
+    }
+    .projetos-text h2{
+        margin: 0;
+    }
+    .projetos-text p{
+        width: 100%;
+    }
+    .project-card{
+        height: auto;
+        width: 30rem;
+    }
+    .projects-grid{
+        margin-bottom: 5rem;
+    }
+
+    /* Sobre Nos */
+    .us-grid .us-title h2{
+        scale: 0.8;
+        margin-top: 2rem;
+    }
+    .us-grid .us-content p{
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    .us-grid .us-content{
+        width: 100%;
+    }
+    .us-grid{
+        margin-bottom: 5rem;
+    }
+
+    /* Contato */
+    .contato-text{
+        scale: 0.8;
+        text-align: center;
+    }
+    .contato-text p{
+        width: 100%;;
+    }
+    .contato-text h3{
+        margin: 0;
+        width: 100%;
+    }
+    .contact-layout{
+        margin-bottom: 5rem;
+        gap: 2rem;    
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-layout p{
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .contact-layout .contact-info-block{
+        width: 90%;
+    }
+    .social-grid .social-links{
+        justify-content: center;
+    }
+    .contact-map{
+        width: 100%;
+    }
+    .contact-map-frame{
+        width: 90%;
+        margin: auto;
+    }
+    /* Footer*/
+    .site-footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+   .site-footer-nav{
+        display: none;
+   }
+   .site-footer-legal{
+        width: 100%;
+   }
+   .site-footer-legal p{
+        width: 100%;
+        font-size: 1rem;
+   }
  }
