@@ -142,3 +142,30 @@ document.addEventListener('keydown', (event) => {
         closeFrotaModal();
     }
 });
+
+// MENU MOBILE 
+const openmenu = document.getElementById('btn-open-mobile')
+const menu = document.getElementById('menu-mobile')
+const overlay = document.getElementById('btn-overlay')
+
+
+
+openmenu.addEventListener('click', openMenu)
+menu.addEventListener('click', closeMenu)
+overlay.addEventListener('click', closeMenu)
+
+function closeMenu(){
+    menu.style.width = '0%'
+    overlay.style.display = 'none'
+    document.body.style.overflow = ''
+}
+function openMenu(){
+    if (window.matchMedia('(max-width: 480px)').matches) {
+        menu.style.width = '70%'; // Tela menor que 480px, menu maior
+    } else {
+        menu.style.width = '40%'; // Tela maior, menu menor
+    }
+    overlay.style.display = 'block'
+    document.body.style.overflow = 'hidden'
+}
+

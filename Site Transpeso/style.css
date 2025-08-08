@@ -42,11 +42,6 @@ span{
     z-index: 11;
     box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.296);
 }
-.header-section div{
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-}
 .logo-header a{ 
     display: flex;
     align-items: center;
@@ -762,7 +757,79 @@ span{
         height: 90vh;
         width:  90vw;
     }
-}   
+
+    /*--- Menu lateral Mobile ---*/
+    .menu-mobile{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0%;
+        overflow: hidden;
+        z-index: 10;
+        transition: width 0.4s ease;
+    }
+    .nav-mobile{
+        width: 100%;
+    }
+    .menu-mobile .nav-mobile ul li a div{
+        padding: 2rem 4%;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .menu-mobile .nav-mobile ul li a{
+        font-size: 2rem;
+        transition: .4s;
+    }   
+    .menu-mobile .nav-mobile ul li a div:hover{
+        background-color: #3B82F6;
+        color: white;
+    }
+    .nav-mobile ul{
+        list-style-type: none;
+        text-align: right;
+    }
+    .nav-mobile .close-mobile-menu{
+        text-align: left;
+        display: block;
+        padding: 2rem;
+        font-size: 2rem;
+        cursor: pointer;
+        width: 6rem;
+    }
+    .overlay-mobile{
+        background-color: rgba(0, 0, 0, 0.581);
+        height: 100vh;
+        position: absolute;
+        inset: 0;
+        z-index: 9;
+        display: none;
+    }
+    .open-mobile{
+        font-size: 4rem;
+        padding: 2rem;
+    }
+    .btn-orcamento-mobile input{
+        width: 100%;
+        color: white;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: rgb(0, 64, 153);
+        border-radius: 1rem;
+        border: none;
+        font-weight: bold;
+        transition: .4s;
+    }
+    .btn-orcamento-mobile{
+        width: 80%;
+        margin: 10rem auto;
+    }
+    .btn-orcamento-mobile input:hover{
+        cursor: pointer;
+        background-color: #3B82F6;
+    }
+}  
  @media screen and (max-width: 480px){
     body{
         height: auto;
@@ -925,4 +992,76 @@ span{
         width: 100%;
         font-size: 1rem;
    }
+   
+   /*Menu Mobile*/
+   .menu-mobile{
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0%;
+        overflow: hidden;
+        z-index: 10;
+        transition: width 0.4s ease;
+    }
+    .nav-mobile{
+        width: 100%;
+    }
+    .menu-mobile .nav-mobile ul li a div{
+        padding: 2rem 4%;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .menu-mobile .nav-mobile ul li a{
+        font-size: 2rem;
+        transition: .4s;
+    }   
+    .menu-mobile .nav-mobile ul li a div:hover{
+        background-color: #3B82F6;
+        color: white;
+    }
+    .nav-mobile ul{
+        list-style-type: none;
+        text-align: right;
+    }
+    .nav-mobile .close-mobile-menu{
+        text-align: left;
+        display: block;
+        padding: 2rem;
+        font-size: 2rem;
+        cursor: pointer;
+        width: 6rem;
+    }
+    .overlay-mobile{
+        background-color: rgba(0, 0, 0, 0.581);
+        height: 100vh;
+        position: absolute;
+        inset: 0;
+        z-index: 9;
+        display: none;
+    }
+    .open-mobile{
+        font-size: 4rem;
+        padding: 2rem;
+    }
+    .btn-orcamento-mobile input{
+        width: 100%;
+        color: white;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: rgb(0, 64, 153);
+        border-radius: 1rem;
+        border: none;
+        font-weight: bold;
+        transition: .4s;
+    }
+    .btn-orcamento-mobile{
+        width: 80%;
+        margin: 10rem auto;
+    }
+    .btn-orcamento-mobile input:hover{
+        cursor: pointer;
+        background-color: #3B82F6;
+    }
  }
