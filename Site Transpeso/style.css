@@ -765,11 +765,26 @@ span{
 
     /*Modal*/
     .modal-serv{
-        background-color: red;
-        height: 90vh;
         width:  90vw;
+        flex-direction: column;
+        overflow: auto;
     }
-
+    .modal-serv .modal-info{
+        width: 100%;
+    }
+    .modal-serv .modal-img{
+        width: 100%;
+    }
+    .modal-serv .modal-info input[type="button"]{
+        width: 80%;
+        position: static;
+        margin-bottom: 5rem;
+    }
+    .close-modal{
+        position: absolute;
+        top: 0;
+        left: 90%;
+    }
     /*--- Menu lateral Mobile ---*/
     .menu-mobile{
         background-color: white;
@@ -1080,5 +1095,30 @@ span{
     .btn-orcamento-mobile input:hover{
         cursor: pointer;
         background-color: #3B82F6;
+    }
+    /* Modal */
+    .modal-serv{
+        width:  90vw;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .modal-serv .modal-info{
+        width: 100%;
+    }
+    .modal-serv .modal-img{
+        width: 100%;
+    }
+    .modal-serv .modal-info input[type="button"]{
+        width: 80%;
+        position: static;
+        margin-bottom: 5rem;
+    }
+    .close-modal{
+        position: absolute;
+        top: 0;
+        left: 80%;
+    }
+    .modal-serv .modal-info h3{
+        font-size: 4rem;
     }
  }
