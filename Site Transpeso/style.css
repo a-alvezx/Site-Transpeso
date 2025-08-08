@@ -34,8 +34,9 @@ span{
 .header-section{ 
     width: 100%;;
     height: 8rem;
+    padding: 0 4%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     background-color: rgb(255, 255, 255);
@@ -228,6 +229,16 @@ span{
     transition: .4s;
     animation: modal-slide-in .4s ease 0s 1 normal forwards;
     overflow: hidden;
+}
+.menu-mobile{
+    display: none;
+    width: 0%;
+}
+.open-mobile{
+    display: none;
+}
+.overlay-mobile{
+    display: none;
 }
 @keyframes modal-slide-in {
 	0% {
@@ -629,6 +640,7 @@ span{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
     }
 
     /* HERO */
@@ -769,6 +781,7 @@ span{
         overflow: hidden;
         z-index: 10;
         transition: width 0.4s ease;
+        display: block;
     }
     .nav-mobile{
         width: 100%;
@@ -807,6 +820,7 @@ span{
         display: none;
     }
     .open-mobile{
+        display: block;
         font-size: 4rem;
         padding: 2rem;
     }
@@ -856,6 +870,7 @@ span{
     }
     .header-section{
         justify-content: space-between;
+        padding: 0;
     }
     /* Hero */
     .container-hero{
@@ -1004,6 +1019,7 @@ span{
         overflow: hidden;
         z-index: 10;
         transition: width 0.4s ease;
+        display: block;
     }
     .nav-mobile{
         width: 100%;
@@ -1044,6 +1060,7 @@ span{
     .open-mobile{
         font-size: 4rem;
         padding: 2rem;
+        display: block;
     }
     .btn-orcamento-mobile input{
         width: 100%;
