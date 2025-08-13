@@ -1127,3 +1127,15 @@ span{
         font-size: 4rem;
     }
  }
+ @media screen and (max-width: 1300px) and (min-width: 769px){
+    .menu-de-navegacao nav a{
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+    .servicos .info-serv, .frota-grid, .projects-grid, .contact-layout{
+        margin-bottom: 5rem;
+    }
+    .contact-layout, .frota-grid{
+        gap: 4rem;
+    }
+}
