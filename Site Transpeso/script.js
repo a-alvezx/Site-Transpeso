@@ -5,6 +5,7 @@ const imagens = [
   "src/img-hero/hero2.jpg",
   "src/img-hero/hero3.jpeg"
 ];
+
 let current = 0;
 const img1 = document.querySelector('.hero-img-1');
 const img2 = document.querySelector('.hero-img-2');
@@ -168,4 +169,7 @@ function openMenu(){
     overlay.style.display = 'block'
     document.body.style.overflow = 'hidden'
 }
+
+// Modal de Videos para os projetos
+
 

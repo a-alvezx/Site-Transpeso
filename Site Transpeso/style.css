@@ -56,8 +56,9 @@ span{
     width: 70px;
 }
 .logo-header .logo-txt {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 3.5rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
     color: rgb(0, 64, 153);
     transition: .4s;
 }
@@ -115,7 +116,6 @@ span{
     opacity: 1;
     pointer-events: none;
 }
-
 .container-hero{
     min-height: 100vh;
     display: flex;
@@ -263,11 +263,13 @@ span{
     display: none;
 }
 .close-modal{
-    position: relative;
+    position: fixed;
     text-align: right;
     font-size: 2.5rem;
     padding: 2rem;
     cursor: pointer;
+    top: 0;
+    left: 95%;
 }
 .modal-serv .modal-img img{
     width: 100%;
@@ -281,6 +283,7 @@ span{
     text-align: center;
 }
 .modal-serv .modal-info h3{
+    margin-top: 5rem;
     font-size: 5rem;
     padding: 1rem;
 }
@@ -597,7 +600,7 @@ span{
     background-color: #1b2233;
 }
 .site-footer-nav a{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding: 2rem;
     color: #9CA3AF;
     font-weight: bolder;
@@ -610,24 +613,43 @@ span{
 }
 .site-footer-content .logo-header p{
     color: white;
-    font-size: 2.5rem;
-    padding-left: 1rem;
+    font-size: 2rem;
+
 }
 .site-footer-legal p{
     text-align: center;
     color: #9CA3AF;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 70%;
     margin: auto;
 }
-
+.container-video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#f3f4f6;
+    height: calc(100vh - 8rem);
+    scroll-snap-align: start; 
+    gap: 5rem;
+}
+.video-grid{
+    width: 60%;
+    height: 60%;
+}
+.video-grid iframe{
+    height: 100%;
+}
+.video-txt h2{
+    font-size: 5.5rem;
+}
 /* --- Media Queries para Responsividade --- */
 
 @media screen and (max-width: 768px) and (min-width: 481px){
     body{
         height: auto;
     }
-    section, footer { 
+    section, footer, .container-video { 
     scroll-snap-align: none; 
     }
 
@@ -786,7 +808,7 @@ span{
         margin-bottom: 5rem;
     }
     .close-modal{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 90%;
     }
@@ -863,12 +885,21 @@ span{
         cursor: pointer;
         background-color: #3B82F6;
     }
+    .video-txt h2 {
+        transform: scale(0.8);
+        text-align: center;
+        margin: auto;
+    }
+    .video-grid{
+        width: 90%;
+        margin-bottom: 5rem;
+    }
 }  
  @media screen and (max-width: 480px){
     body{
         height: auto;
     }
-    section, footer { 
+    section, footer, .container-video { 
     scroll-snap-align: none; 
     }
     /* header */
@@ -1126,8 +1157,22 @@ span{
     .modal-serv .modal-info h3{
         font-size: 4rem;
     }
+    .video-txt h2 {
+        transform: scale(0.8);
+        text-align: center;
+        margin: auto;
+    }
+    .video-grid{
+        width: 90%;
+        height: auto;
+        margin-bottom: 5rem;
+    }
+    .container-video{
+        justify-content: flex-start;
+        height: auto;
+    }   
  }
- @media screen and (max-width: 1300px) and (min-width: 769px){
+ @media screen and (max-width: 1400px) and (min-width: 769px){
     .menu-de-navegacao nav a{
         font-size: 1.5rem;
         padding: .5rem;
@@ -1137,5 +1182,19 @@ span{
     }
     .contact-layout, .frota-grid{
         gap: 4rem;
+    }
+    .modal-serv .modal-info{
+        overflow: auto;
+    }
+    .modal-serv .modal-info input[type="button"]{
+        position: static;
+        margin-bottom: 5rem;
+    }
+    .site-footer-nav a{
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .site-footer-nav{
+        align-items: center;
     }
 }
